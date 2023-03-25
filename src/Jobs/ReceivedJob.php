@@ -21,6 +21,9 @@ class ReceivedJob extends BaseJob
         Log::info("handle message");
     }
 
+    /**
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
     public function fire()
     {
         // Check limit failed to stop handle
@@ -36,6 +39,8 @@ class ReceivedJob extends BaseJob
         $method = 'handle';
 
         ($this->instance = $this->resolve($class))->{$method}($data);
+
+        $this->delete();
     }
 
     protected function isJobFailedCompletely() : bool
