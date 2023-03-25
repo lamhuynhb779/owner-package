@@ -24,6 +24,6 @@ class RabbitMQExecuteJob implements ShouldQueue
 
     public function handle($data)
     {
-        echo json_decode($data)->data . PHP_EOL;
+        echo json_encode($data) . PHP_EOL;
     }
 }
