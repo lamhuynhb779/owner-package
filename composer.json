@@ -1,0 +1,21 @@
+{
+    "name": "hayashi/rabbitmq",
+    "description": "Hayashi Rabbitmq - A sample publish vs consume message rabbitmq",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hayashi\\Rabbitmq\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lamhuynhb779",
+            "email": "lamhuynhb779@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "^11.3"
+    }
+}
