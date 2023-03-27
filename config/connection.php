@@ -16,7 +16,7 @@ return [
          * and must be unique
          * Caution: duplicate routing key lead to your job being consumed by other project
          */
-        'routing_key' => 'gotitEventLogger',
+        'routing_key' => 'hayashiEventLogger',
 
         'driver'      => 'rabbitmq',
         'queue'       => env('RABBITMQ_QUEUE', 'default'),
@@ -42,10 +42,10 @@ return [
                 'passphrase'  => env('RABBITMQ_SSL_PASSPHRASE', null),
             ],
             'queue'       => [
-                'job'                => Dayonevn\GotitEvent\Jobs\GotitEventJob::class,
+                'job'                => \Hayashi\Rabbitmq\Jobs\ReceivedJob::class,
                 'reroute_failed'     => true,
                 'failed_exchange'    => 'failed-exchange',
-                'failed_routing_key' => 'gotit-event-failed-%s',
+                'failed_routing_key' => 'hayashi-event-failed-%s',
             ],
         ],
 
@@ -63,10 +63,10 @@ return [
      *     'rabbitmq' =>
      * ]
      */
-    'gotit_push_event'   => [
+    'hayashi_push_event'   => [
         'driver'      => 'redis',
-        'connection'  => 'gotitEvent',
-        'queue'       => 'gotitEvent',
+        'connection'  => 'hayashiEvent',
+        'queue'       => 'hayashiEvent',
         'retry_after' => 90,
         'block_for'   => null,
     ],
@@ -83,7 +83,7 @@ return [
         'username' => env('REDIS_USERNAME'),
         'password' => env('REDIS_PASSWORD'),
         'port'     => env('REDIS_PORT', '6379'),
-        'database' => env('REDIS_GOTIT_EVENT_DB', '2'),
+        'database' => env('REDIS_HAYASHI_EVENT_DB', '2'),
     ],
 
     // If true, all events will be fired under the same Event class: GotitEvent.php
