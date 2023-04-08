@@ -20,6 +20,8 @@ class TestPushJobCommand extends Command
      */
     protected $description = 'Connect RabbitMQ and push a job';
 
+    protected $data;
+
     /**
      * Create a new command instance.
      *
@@ -27,6 +29,7 @@ class TestPushJobCommand extends Command
      */
     public function __construct()
     {
+        $this->data['event'] = 'sample';
         parent::__construct();
     }
 
@@ -43,7 +46,11 @@ class TestPushJobCommand extends Command
         $connection->push(
             'RabbitMQExecuteJob@handle',
             json_encode(['message' => 'This is a message from producer'], JSON_THROW_ON_ERROR),
-            'default'
+            config('queue.connections.rabbitmq.queue'),
+            [
+                'exchange'             => 'order.fanout',
+                'exchange_type'        => 'fanout',
+            ]
         );
     }
 }

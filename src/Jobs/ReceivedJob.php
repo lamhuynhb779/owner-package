@@ -21,6 +21,9 @@ class ReceivedJob extends BaseJob
         Log::info("handle message");
     }
 
+    /**
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
     public function fire()
     {
         // Check limit failed to stop handle
@@ -32,10 +35,12 @@ class ReceivedJob extends BaseJob
         $data = $this->getData();
 //         $payload = $this->payload();
 
-        $class = RabbitMQExecuteJob::class;
+        $class = TestJob::class;
         $method = 'handle';
 
         ($this->instance = $this->resolve($class))->{$method}($data);
+
+        $this->delete();
     }
 
     protected function isJobFailedCompletely() : bool
