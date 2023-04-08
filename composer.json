@@ -1,0 +1,19 @@
+{
+    "name": "simplexi/greetr",
+    "description": "Greetr - A simple Lavaral package.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Simplexi\\Greetr\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "lamhuynhb779",
+            "email": "lamhuynhb779@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
