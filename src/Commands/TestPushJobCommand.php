@@ -44,7 +44,7 @@ class TestPushJobCommand extends Command
         $queueManager = app('queue');
         $connection = $queueManager->connection('rabbitmq');
         $connection->push(
-            'RabbitMQExecuteJob@handle',
+            'TestJob@handle',
             json_encode(['message' => 'This is a message from producer'], JSON_THROW_ON_ERROR),
             config('queue.connections.rabbitmq.queue'),
             [
