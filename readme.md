@@ -12,6 +12,8 @@ Chạy lệnh `$ composer update`
 ###### Bước 3: 
 Copy nội dung file _config/connection.php_ trong package vào thư mục project _config/queue.php_
 
+Chỉnh lại field queue.job => \Hayashi\Rabbitmq\Jobs\ReceivedJob::class
+
 ###### Bước 4: 
 Chỉnh QUEUE_CONNECTION = rabbitmq
 
