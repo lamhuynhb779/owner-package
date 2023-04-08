@@ -1,11 +1,11 @@
 {
-    "name": "hayashi/rabbitmq",
-    "description": "Hayashi Rabbitmq - A sample publish vs consume message rabbitmq",
+    "name": "owner/rabbit",
+    "description": "Sample laravel rabbitmq package",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hayashi\\Rabbitmq\\": "src/"
+            "Owner\\Rabbit\\": "src/"
         }
     },
     "authors": [

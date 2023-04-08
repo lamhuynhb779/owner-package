@@ -68,6 +68,7 @@ class ComposerStaticInit093234701d17e1fb572a8e086c5e5c73
         ),
         'O' => 
         array (
+            'Owner\\Rabbit\\' => 13,
             'Opis\\Closure\\' => 13,
         ),
         'L' => 
@@ -84,10 +85,6 @@ class ComposerStaticInit093234701d17e1fb572a8e086c5e5c73
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
             'Illuminate\\Console\\' => 19,
-        ),
-        'H' => 
-        array (
-            'Hayashi\\Rabbitmq\\' => 17,
         ),
         'D' => 
         array (
@@ -196,6 +193,10 @@ class ComposerStaticInit093234701d17e1fb572a8e086c5e5c73
         array (
             0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
+        'Owner\\Rabbit\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Opis\\Closure\\' => 
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
@@ -206,8 +207,8 @@ class ComposerStaticInit093234701d17e1fb572a8e086c5e5c73
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
-            1 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Queue\\' => 
@@ -237,10 +238,6 @@ class ComposerStaticInit093234701d17e1fb572a8e086c5e5c73
         'Illuminate\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/console',
-        ),
-        'Hayashi\\Rabbitmq\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Doctrine\\Inflector\\' => 
         array (
