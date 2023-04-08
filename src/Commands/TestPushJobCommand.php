@@ -1,6 +1,6 @@
 <?php
 
-namespace Hayashi\Rabbitmq\Commands;
+namespace Owner\Rabbit\Commands;
 
 use Illuminate\Console\Command;
 

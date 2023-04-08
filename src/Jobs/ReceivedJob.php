@@ -1,6 +1,6 @@
 <?php
 
-namespace Hayashi\Rabbitmq\Jobs;
+namespace Owner\Rabbit\Jobs;
 
 use Illuminate\Support\Facades\Log;
 use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob as BaseJob;

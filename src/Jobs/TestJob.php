@@ -1,6 +1,6 @@
 <?php
 
-namespace Hayashi\Rabbitmq\Jobs;
+namespace Owner\Rabbit\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
