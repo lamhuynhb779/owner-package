@@ -14,7 +14,7 @@ The package we are creating is called “greetr” that just displays a greeting
 
 On the default folder structure of a new Laravel project, create a file structure as shown below to house our package development.
 
-![img.png](img.png)
+![img.png](images/img.png)
 
 Note that inside the packages folder should be the vendor name simplexi followed by the package name greetr. The src folder will contain all of our package source code. In some instances, you may also create a dist branch if you are compiling your assets for a production server. In this way, developers that will be using your package will have an option to choose between the source files in the src folder or the distribution files in the dist folder when installing your package through Composer.
 
@@ -26,7 +26,7 @@ In your command prompt, navigate to `packages/simplexi/greetr` directory. Then w
 
 This command will ask you for some info regarding your package. You can accept the defaults by pressing enter and edit composer.json file that will be created later.
 
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 
 After the initialization, we can edit the `composer.json` file as follows.
 
@@ -122,7 +122,7 @@ Run an out of the box development server from Laravel by running the following c
 
 Open your browser and enter the following URL: http://127.0.0.1:8000/greetr/Francis
 
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
 
                                 . . .
 
@@ -132,7 +132,7 @@ Open your browser and enter the following URL: http://127.0.0.1:8000/greetr/Fran
 
 First, we should create a new project in GitLab. Make sure the visibility level is set to public. We may also set it to private if we want control over who can use our package. Doing this will require additional steps. But for this tech blog’s purposes, we will set it as public.
 
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)
 
 Navigate to our package directory `packages/simplexi/greetr`. Initialize git, commit changes, and tag changeset with semantic versioning by running the following commands.
 

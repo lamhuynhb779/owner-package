@@ -46,13 +46,11 @@ class TestPushJobCommand extends Command
         $connection->push(
             'RabbitMQExecuteJob@handle',
             json_encode(['message' => 'This is a message from producer'], JSON_THROW_ON_ERROR),
-            config('queue.connections.rabbitmq.queue'), //  hoặc dùng 'default'
+            config('queue.connections.rabbitmq.queue'),
             [
-                'exchange'             => 'hayashi-event',
-                'exchange_type'        => 'direct',
-                'exchange_routing_key' => 'hayashi-event-' . $this->data['event'],
+                'exchange'             => 'order.fanout',
+                'exchange_type'        => 'fanout',
             ]
-
         );
     }
 }
