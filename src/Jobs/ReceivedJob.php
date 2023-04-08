@@ -35,7 +35,7 @@ class ReceivedJob extends BaseJob
         $data = $this->getData();
 //         $payload = $this->payload();
 
-        $class = RabbitMQExecuteJob::class;
+        $class = TestJob::class;
         $method = 'handle';
 
         ($this->instance = $this->resolve($class))->{$method}($data);
