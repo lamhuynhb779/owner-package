@@ -1,0 +1,13 @@
+{
+    "name": "simplexi/report-shipper",
+    "description": "Forwarding message to Slack",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Simplexi\\ReportShipper\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
